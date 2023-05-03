@@ -18,15 +18,20 @@ $len_text = strlen($text);
         <div class="container">
             <h1 class="mt-3">Bad Words</h1>
             <div class="card rounded-0 shadow col-8 mt-3">
-                <div class="card-body">
-                    <div class="fw-bold">Testo Inserito:</div>
-                    <div> <?php echo $text ?> </div>
-                    <span class="fw-bold">Lunghezza: <?php echo $len_text ?></span>
-                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="fw-bold">Testo Inserito:</div>
+                        <div> <?php echo $text ?> </div>
+                        <span class="fw-bold">Lunghezza: <?php echo $len_text ?></span>   
+                    </li>
+                    <li class="list-group-item">
+                        <div class="fw-bold">Testo corretto:</div>
+                        <div> <?php echo $text ?> </div>
+                        <span class="fw-bold">Lunghezza: <?php echo $len_text ?></span>   
+                    </li>
+                </ul>
             </div>
-
         </div>
-
     </body>
 </html>
 
