@@ -1,7 +1,13 @@
 <?php
 
 $text = $_POST["text"];
+$bad_word = $_POST["bad_word"];
 $len_text = strlen($text);
+
+//str_replace("Original Value", "Value to be replaced", "String");
+$text_censored = str_replace($bad_word, "***", $text);
+$len_text_censored = strlen($text_censored);
+
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +32,8 @@ $len_text = strlen($text);
                     </li>
                     <li class="list-group-item">
                         <div class="fw-bold">Testo corretto:</div>
-                        <div> <?php echo $text ?> </div>
-                        <span class="fw-bold">Lunghezza: <?php echo $len_text ?></span>   
+                        <div> <?php echo $text_censored ?> </div>
+                        <span class="fw-bold">Lunghezza: <?php echo $len_text_censored ?></span>   
                     </li>
                 </ul>
             </div>
