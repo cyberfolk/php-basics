@@ -60,19 +60,19 @@ $hotels = [
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th scope="col">#</th>
-                            <th scope="col">name</th>
-                            <th scope="col">description</th>
-                            <th scope="col">parking</th>
-                            <th scope="col">vote</th>
-                            <th scope="col">distance_to_center</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Parking</th>
+                            <th scope="col">Vote</th>
+                            <th scope="col">Distance to center</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-group-divider">
                         <?php foreach ($hotels as $index => $hotel) : ?>
-                            <tr>
-                                <th scope="row"><?= $index + 1; ?></th>
+                            <tr class="text-center">
+                                <td scope="row"><?= $index + 1; ?></td>
                                 <?php foreach ($hotel as $key => $value) : ?>
                                     <td><?= $value; ?></td>
                                 <?php endforeach; ?>
