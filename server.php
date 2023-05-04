@@ -45,8 +45,17 @@ function have_parking($hotel)
     return $hotel["parking"];
 }
 
+function min_stars($hotel)
+{
+    return $hotel["vote"] >= $_GET["stars"];
+}
+
 if ($_GET["parking"]) {
     $hotels = array_filter($hotels, "have_parking");
+}
+
+if ($_GET["stars"]) {
+    $hotels = array_filter($hotels, "min_stars");
 }
 
 ?>
