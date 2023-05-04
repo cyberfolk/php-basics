@@ -97,7 +97,7 @@ if ($stars) {
                         <div class="input-group-text">
                             <label for="stars">&#11088;</label>
                         </div>
-                        <input type="number" name="stars" id="stars" class="form-control" placeholder="Insert number of stars">
+                        <input type="number" name="stars" id="stars" min="0" max="5" class="form-control" placeholder="Insert number of stars">
                     </div>
                     <!-- /#input-group -->
                     <button type="submit" class="btn btn-primary d-block m-auto">Filter</button>
