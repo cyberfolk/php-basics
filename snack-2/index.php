@@ -18,15 +18,15 @@
                 <form action="server.php" method="post">
                     <div class="mb-3">
                         <label for="name">Name</label>
-                        <input type="text" name="bad_word" id="bad_word" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
                     </div>
                     <div class="mb-3">
                         <label for="mail">Mail</label>
-                        <input type="text" name="text" id="text" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
+                        <input type="text" name="mail" id="mail" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
                     </div>
                     <div class="mb-3">
                         <label for="age">Age</label>
-                        <input type="number" name="text" id="text" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
+                        <input type="number" name="age" id="age" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-primary">Reset</button>
