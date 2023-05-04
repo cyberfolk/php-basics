@@ -6,7 +6,7 @@ $age = $_POST["age"];
 
 $flag = true;
 
-if (!strlen($name) > 3) {
+if (!(strlen($name) > 3)) {
     $flag = false;
 }
 
