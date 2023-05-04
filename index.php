@@ -13,16 +13,20 @@
 <body>
     <div class="container">
         <h1 class="mt-3"> Hotel</h1>
-        <div class="card rounded-0 shadow col-8 mt-3">
+        <div class="card rounded-0 shadow col-3 mt-3">
             <div class="card-body">
                 <form action="server.php" method="get">
-                    <div class="mb-3">
-                        <label for="parking">Parking</label>
-                        <input type="text" name="parking" id="parking" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" value="">
+                        </div>
+                        <label for="parking" class="form-control">Only hotels with parking</label>
                     </div>
-                    <div class="mb-3">
-                        <label for="stars">Stars</label>
-                        <input type="number" name="stars" id="stars" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <label for="stars">&#11088;</label>
+                        </div>
+                        <input type="number" name="stars" id="stars" class="form-control" placeholder="Insert number of stars">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-primary">Reset</button>
