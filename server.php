@@ -39,6 +39,16 @@ $hotels = [
     ],
 
 ];
+
+function have_parking($hotel)
+{
+    return $hotel["parking"];
+}
+
+if ($_GET["parking"]) {
+    $hotels = array_filter($hotels, "have_parking");
+}
+
 ?>
 
 <!DOCTYPE html>

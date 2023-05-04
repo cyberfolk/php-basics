@@ -18,7 +18,7 @@
                 <form action="server.php" method="get">
                     <div class="input-group mb-3">
                         <div class="input-group-text">
-                            <input class="form-check-input mt-0" type="checkbox" value="">
+                            <input class="form-check-input mt-0" name="parking" id="parking" type="checkbox">
                         </div>
                         <label for="parking" class="form-control">Only hotels with parking</label>
                     </div>
