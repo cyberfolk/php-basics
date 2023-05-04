@@ -1,3 +1,73 @@
+<?php
+$hotels = [
+    [
+        'name' => 'Hotel Belvedere',
+        'description' => 'Hotel Belvedere Descrizione',
+        'parking' => true,
+        'vote' => 4,
+        'distance_to_center' => 10.4
+    ], [
+        'name' => 'Hotel Futuro',
+        'description' => 'Hotel Futuro Descrizione',
+        'parking' => true,
+        'vote' => 2,
+        'distance_to_center' => 2
+    ], [
+        'name' => 'Hotel Rivamare',
+        'description' => 'Hotel Rivamare Descrizione',
+        'parking' => false,
+        'vote' => 1,
+        'distance_to_center' => 1
+    ], [
+        'name' => 'Hotel Bellavista',
+        'description' => 'Hotel Bellavista Descrizione',
+        'parking' => false,
+        'vote' => 5,
+        'distance_to_center' => 5.5
+    ], [
+        'name' => 'Hotel Milano',
+        'description' => 'Hotel Milano Descrizione',
+        'parking' => true,
+        'vote' => 2,
+        'distance_to_center' => 50
+    ],
+];
+
+$parking = $_GET["parking"] ?? null;
+$stars = $_GET["stars"] ?? null;
+
+# 1 WAY: array_filter + callback
+/* function have_parking($hotel){
+    return $hotel["parking"];
+}
+
+function min_stars($hotel){
+    return $hotel["vote"] >= $_GET["stars"];
+}
+
+if ($_GET["parking"]) {
+    $hotels = array_filter($hotels, "have_parking");
+}
+
+if ($_GET["stars"]) {
+    $hotels = array_filter($hotels, "min_stars");
+} */
+
+# 1 WAY: array_filter + anonymous function
+if ($parking) {
+    $hotels = array_filter($hotels, function ($hotel) {
+        return $hotel["parking"];
+    });
+}
+
+if ($stars) {
+    $hotels = array_filter($hotels, function ($hotel) use ($stars) {
+        return $hotel["vote"] >= $stars;
+    });
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,27 +82,59 @@
 
 <body>
     <div class="container">
-        <h1 class="mt-3"> Hotel</h1>
-        <div class="card rounded-0 shadow col-3 mt-3">
+        <h1 class="mt-3 text-center"> Hotel</h1>
+        <div id="form_card" class="card rounded-0 shadow col-3 mt-4 m-auto">
             <div class="card-body">
-                <form action="server.php" method="get">
+                <form action="index.php" method="get">
                     <div class="input-group mb-3">
                         <div class="input-group-text">
                             <input class="form-check-input mt-0" name="parking" id="parking" type="checkbox">
                         </div>
                         <label for="parking" class="form-control">Only hotels with parking</label>
                     </div>
+                    <!-- /#input-group -->
                     <div class="input-group mb-3">
                         <div class="input-group-text">
                             <label for="stars">&#11088;</label>
                         </div>
                         <input type="number" name="stars" id="stars" class="form-control" placeholder="Insert number of stars">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <!-- /#input-group -->
+                    <button type="submit" class="btn btn-primary d-block m-auto">Filter</button>
                 </form>
             </div>
+            <!-- /#card-body -->
         </div>
+        <!-- /#form_card -->
+
+        <div id="view_card" class="card rounded-0 shadow col-8 mt-4 m-auto">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Parking</th>
+                            <th scope="col">Vote</th>
+                            <th scope="col">Distance to center</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <?php foreach ($hotels as $index => $hotel) : ?>
+                            <tr class="text-center">
+                                <td scope="row"><?= $index + 1; ?></td>
+                                <?php foreach ($hotel as $key => $value) : ?>
+                                    <td><?= $value; ?></td>
+                                <?php endforeach; ?>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /#card-body -->
+        </div>
+        <!-- /#view_card -->
     </div>
 </body>
 
