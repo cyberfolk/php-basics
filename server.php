@@ -58,19 +58,21 @@ $hotels = [
         <h1 class="mt-3"> Hotel</h1>
         <div class="card rounded-0 shadow col-8 mt-3">
             <div class="card-body">
-                <table>
+                <table class="table">
                     <thead>
                         <tr>
-                            <th>name</th>
-                            <th>description</th>
-                            <th>parking</th>
-                            <th>vote</th>
-                            <th>distance_to_center</th>
+                            <th scope="col">#</th>
+                            <th scope="col">name</th>
+                            <th scope="col">description</th>
+                            <th scope="col">parking</th>
+                            <th scope="col">vote</th>
+                            <th scope="col">distance_to_center</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($hotels as $hotel) : ?>
+                        <?php foreach ($hotels as $index => $hotel) : ?>
                             <tr>
+                                <th scope="row"><?= $index + 1; ?></th>
                                 <?php foreach ($hotel as $key => $value) : ?>
                                     <td><?= $value; ?></td>
                                 <?php endforeach; ?>
