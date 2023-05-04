@@ -21,5 +21,5 @@ $matchs = [
 ];
 
 foreach ($matchs as $match) {
-    echo $match['home_team'] . " - " . $match['away_team'] . " | "  . $match['score_home_team'] . " - " . $match['score_away_team'] . "\n";
+    echo $match['home_team'] . " - " . $match['away_team'] . " | "  . $match['score_home_team'] . " - " . $match['score_away_team'] . "<br/>";
 }
