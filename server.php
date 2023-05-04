@@ -40,6 +40,7 @@ $hotels = [
 
 ];
 
+# 1 WAY: array_filter + callback
 /* function have_parking($hotel){
     return $hotel["parking"];
 }
@@ -56,15 +57,17 @@ if ($_GET["stars"]) {
     $hotels = array_filter($hotels, "min_stars");
 } */
 
+# 1 WAY: array_filter + anonymous function
 if ($_GET["parking"]) {
     $hotels = array_filter($hotels, function ($hotel) {
         return $hotel["parking"];
     });
 }
 
+$min_stars =  $_GET["stars"];
 if ($_GET["stars"]) {
-    $hotels = array_filter($hotels, function ($hotel) {
-        return $hotel["vote"] >= $_GET["stars"];
+    $hotels = array_filter($hotels, function ($hotel) use ($min_stars) {
+        return $hotel["vote"] >= $min_stars;
     });
 }
 
