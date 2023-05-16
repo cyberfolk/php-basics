@@ -42,9 +42,6 @@ include __DIR__ . "/db.php";
         <!-- /.container -->
     </main>
     <!-- /#app_main -->
-
-    <!-- vue.js -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
 
 </html>
