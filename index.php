@@ -11,13 +11,40 @@ include __DIR__ . "/db.php";
     <?php include __DIR__ . "/assets/partials/header.php" ?>
     <main id="app_main">
         <div class="container">
-            <?= $rambo->get_name() ?>
-
+            <div class="col-6 m-auto">
+                <div id="movie_card" class="card shadow mt-4 m-auto">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr class="text-center">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Genres</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <?php foreach ($movie_list as $index => $movie) : ?>
+                                    <tr class="text-center">
+                                        <td scope="row"><?= $index + 1; ?></td>
+                                        <td scope="row"><?= $movie->name; ?></td>
+                                        <td scope="row"><?= $movie->genre; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /#card-body -->
+                </div>
+                <!-- /#movie_card -->
+            </div>
+            <!-- /.col-4 -->
         </div>
         <!-- /.container -->
     </main>
     <!-- /#app_main -->
 
+    <!-- vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
 
 </html>
