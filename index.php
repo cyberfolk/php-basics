@@ -27,7 +27,7 @@ include __DIR__ . "/db.php";
                                     <tr class="text-center">
                                         <td scope="row"><?= $index + 1; ?></td>
                                         <td scope="row"><?= $movie->name; ?></td>
-                                        <td scope="row"><?= $movie->genre; ?></td>
+                                        <td scope="row"><?= $movie->get_genres_to_string(); ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

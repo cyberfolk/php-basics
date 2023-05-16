@@ -2,12 +2,12 @@
 class Movie
 {
     public $name;
-    public $genre;
+    public $genres;
 
-    public function __construct($name, $genre)
+    public function __construct($name, $genres)
     {
         $this->name = $name;
-        $this->genre = $genre;
+        $this->genres = $genres;
     }
 
     function get_name()
@@ -15,8 +15,8 @@ class Movie
         return $this->name;
     }
 
-    function get_genre()
+    function get_genres_to_string()
     {
-        return $this->genre;
+        return implode(", ", $this->genres);
     }
 }
