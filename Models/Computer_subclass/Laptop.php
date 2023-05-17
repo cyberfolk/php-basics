@@ -11,4 +11,8 @@ class Laptop extends Computer
     {
         return $this->battery_life;
     }
+    public function get_typology()
+    {
+        return get_class();
+    }
 }

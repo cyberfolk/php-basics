@@ -16,7 +16,15 @@ require_once __DIR__ . "/Database/db.php";
                     <div class="col-4 m-auto">
                         <div class="card shadow mt-4 m-auto">
                             <div class="card-body">
-                                <h1 class="card-title">Hello</h1>
+                                <h1 class="card-title">
+                                    <span><?= $computer->get_brand() ?></span>
+                                    <span> - </span>
+                                    <span><?= $computer->get_model() ?></span>
+                                </h1>
+                                <div>
+                                    <span class="fw-bold">Tipologia:</span>
+                                    <span><?= $computer->get_typology() ?></span>
+                                </div>
                                 <div>
                                     <span class="fw-bold">MAC:</span>
                                     <span><?= $computer->get_MAC() ?></span>

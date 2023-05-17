@@ -5,4 +5,8 @@ class Desktop extends Computer
     {
         parent::__construct($brand, $model, $MAC, $components);
     }
+    public function get_typology()
+    {
+        return get_class();
+    }
 }
