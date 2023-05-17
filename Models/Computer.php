@@ -1,13 +1,14 @@
 <?php
 class Computer
 {
-    public function __construct(protected string $brand, protected string $model,  protected string $MAC, protected array $components)
+    public function __construct(protected string $img, protected string $brand, protected string $model,  protected string $MAC, protected array $components)
     {
         foreach ($components as $component) {
             if (!($component instanceof Component)) {
                 trigger_error('Array of objects passed to constructor must contain instances of Component', E_USER_ERROR);
             }
         }
+        $this->img = $img;
         $this->brand = $brand;
         $this->model = $model;
         $this->MAC = $MAC;
@@ -32,6 +33,10 @@ class Computer
     public function get_typology()
     {
         return get_class();
+    }
+    public function get_img()
+    {
+        return $this->img;
     }
 
     public function get_components_to_string()
