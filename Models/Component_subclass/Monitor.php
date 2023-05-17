@@ -18,4 +18,8 @@ class Monitor extends Component
     {
         return $this->resolution;
     }
+    public function to_string()
+    {
+        return "<strong>" . get_class() . "</strong>" . ": " . $this->brand . ", " . $this->model . ", " . $this->price . "$, " . $this->size . "\", " . $this->resolution;
+    }
 }

@@ -12,4 +12,8 @@ class Keyboard extends Component
     {
         return $this->extension;
     }
+    public function to_string()
+    {
+        return "<strong>" . get_class() . "</strong>"  . ": " . $this->brand . ", " . $this->model . ", " . $this->price . "$, " . $this->extension . "%";
+    }
 }

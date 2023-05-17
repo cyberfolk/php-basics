@@ -15,6 +15,6 @@ $components_list_1 = [$keyboard_1, $monitor_1];
 $components_list_2 = [$monitor_2, $monitor_2];
 
 $computer_list = [
-    new Laptop("00-08-74-4C-7F-1D", $components_list_1, 8),
-    new Desktop("11-08-45-4C-3T-1D", $components_list_2),
+    new Laptop("ASUS", "W3D5V", "00-08-74-4C-7F-1D", $components_list_1, 8),
+    new Desktop("HP", "4V76B", "11-08-45-4C-3T-1D", $components_list_2),
 ];

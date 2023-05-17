@@ -13,9 +13,19 @@ require_once __DIR__ . "/Database/db.php";
         <div class="container">
             <div class="row">
                 <?php foreach ($computer_list as $computer) : ?>
-                    <div class="col-6 m-auto">
+                    <div class="col-4 m-auto">
                         <div class="card shadow mt-4 m-auto">
-                            <h1>Hello</h1>
+                            <div class="card-body">
+                                <h1 class="card-title">Hello</h1>
+                                <div>
+                                    <span class="fw-bold">MAC:</span>
+                                    <span><?= $computer->get_MAC() ?></span>
+                                </div>
+                                <div>
+                                    <span><?= $computer->get_components_to_string() ?></span>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
                         <!-- /.card -->
                     </div>
