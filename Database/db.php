@@ -1,39 +1,20 @@
 <?php
-require_once __DIR__ . "/Models/Movie.php";
-require_once __DIR__ . "/Models/Genre.php";
+require_once __DIR__ . "/../Models/Component.php";
+require_once __DIR__ . "/../Models/Component_subclass/Keyboard.php";
+require_once __DIR__ . "/../Models/Component_subclass/Monitor.php";
+require_once __DIR__ . "/../Models/Computer.php";
+require_once __DIR__ . "/../Models/Computer_subclass/Desktop.php";
+require_once __DIR__ . "/../Models/Computer_subclass/Laptop.php";
 
-$azione = new Genre("azione", "14+");
-$animazione = new Genre("animazione", "T");
-$avventura = new Genre("avventura", "6+");
-$biografico = new Genre("biografico", "6+");
-$catastrofico = new Genre("catastrofico", "6+");
-$comico = new Genre("comico", "14+");
-$commedia = new Genre("commedia", "14+");
-$drammatico = new Genre("drammatico", "14+");
-$erotico = new Genre("erotico", "18+");
-$fantascienza = new Genre("fantascienza", "6+");
-$fantasy = new Genre("fantasy", "6+");
-$gangster = new Genre("gangster", "14+");
-$giallo = new Genre("giallo", "14+");
-$guerra = new Genre("guerra", "14+");
-$horror = new Genre("horror", "18+");
-$musicale = new Genre("musicale", "T");
-$spionaggio = new Genre("spionaggio", "14+");
-$sportivo = new Genre("sportivo", "T");
-$storico = new Genre("storico", "6+");
+$keyboard_1 = new Keyboard("Dierya", "DK61E", 49.99, 60);
+$keyboard_2 = new Keyboard("Akko", "3108 ", 95.99, 95);
+$monitor_1 = new Monitor("Lenovo", "D24-45 ", 109.00, 24, "1920 x 1080");
+$monitor_2 = new Monitor("KOORUI ", "S4C-65 ", 120.00, 27, "1920 x 1080");
 
-$list_genres_1 = [$guerra, $azione];
-$list_genres_2 = [$animazione, $fantasy];
-$list_genres_3 = [$azione, $fantascienza];
-$list_genres_4 = [$azione];
-$list_genres_5 = [$avventura, $fantasy, $azione];
-$list_genres_6 = [$fantascienza, $avventura];
+$components_list_1 = [$keyboard_1, $monitor_1];
+$components_list_2 = [$monitor_2, $monitor_2];
 
-$movie_list = [
-    new Movie("Rambo", $list_genres_1),
-    new Movie("Peter Pan", $list_genres_2),
-    new Movie("Avengers", $list_genres_3),
-    new Movie("The Terminal", $list_genres_4),
-    new Movie("The Lord of the Ring", $list_genres_5),
-    new Movie("Star Wars", $list_genres_6),
+$computer_list = [
+    new Laptop("00-08-74-4C-7F-1D", $components_list_1, 8),
+    new Desktop("11-08-45-4C-3T-1D", $components_list_2),
 ];

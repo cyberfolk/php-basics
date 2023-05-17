@@ -1,8 +1,9 @@
 <?php
 class Component
 {
-    public function __construct(protected string $model, protected int $price)
+    public function __construct(protected string $brand, protected string $model, protected float $price)
     {
+        $this->brand = $brand;
         $this->model = $model;
         $this->price = $price;
     }
@@ -12,7 +13,7 @@ class Component
         return $this->model;
     }
 
-    public function get_pricel()
+    public function get_price()
     {
         return $this->price;
     }
