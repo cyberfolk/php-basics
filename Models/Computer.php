@@ -1,7 +1,7 @@
 <?php
 class Computer
 {
-    public function __construct(protected String $MAC, protected array $components)
+    public function __construct(protected string $MAC, protected array $components)
     {
         foreach ($components as $component) {
             if (!($component instanceof Component)) {
