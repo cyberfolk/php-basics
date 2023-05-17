@@ -29,6 +29,11 @@ class Computer
         return $this->MAC;
     }
 
+    public function get_typology()
+    {
+        return get_class();
+    }
+
     public function get_components_to_string()
     {
         $return_string = "";
