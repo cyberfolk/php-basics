@@ -14,24 +14,35 @@ require_once __DIR__ . "/Database/db.php";
             <div class="row">
                 <?php foreach ($computer_list as $computer) : ?>
                     <div class="col-4 m-auto">
-                        <div class="card shadow mt-4 m-auto">
+                        <div class="card shadow mt-4 m-auto ">
                             <div class="card-body">
                                 <h1 class="card-title">
                                     <span><?= $computer->get_brand() ?></span>
                                     <span> - </span>
                                     <span><?= $computer->get_model() ?></span>
                                 </h1>
-                                <div>
-                                    <span class="fw-bold">Tipologia:</span>
+                                <!-- /.card-title -->
+                                <div class="pc_typology">
+                                    <span class="fw-bold">Typology:</span>
                                     <span><?= $computer->get_typology() ?></span>
                                 </div>
-                                <div>
+                                <!-- /.pc_typology  -->
+                                <div class="battery">
+                                    <?php if ($computer instanceof Laptop) : ?>
+                                        <span class="fw-bold">Battery:</span>
+                                        <span><?= $computer->get_battery_life() ?></span>
+                                    <?php endif; ?>
+                                </div>
+                                <!-- /.battery -->
+                                <div class="MAC">
                                     <span class="fw-bold">MAC:</span>
                                     <span><?= $computer->get_MAC() ?></span>
                                 </div>
-                                <div>
+                                <!-- /.MAC -->
+                                <div class="components">
                                     <span><?= $computer->get_components_to_string() ?></span>
                                 </div>
+                                <!-- /.components -->
                             </div>
                             <!-- /.card-body -->
                         </div>

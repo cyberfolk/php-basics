@@ -9,7 +9,7 @@ class Laptop extends Computer
 
     public function get_battery_life()
     {
-        return $this->battery_life;
+        return $this->battery_life . " hour";
     }
     public function get_typology()
     {
