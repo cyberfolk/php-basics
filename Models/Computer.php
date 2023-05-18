@@ -12,7 +12,7 @@ class Computer
         $this->brand = $brand;
         $this->model = $model;
         $this->MAC = $MAC;
-        $this->components = $components;
+        $this->set_components($components);
     }
 
     public function get_brand()
@@ -34,6 +34,15 @@ class Computer
     {
         return get_class();
     }
+
+    public function set_components($components)
+    {
+        if (count($components) < 1) {
+            throw new Exception("Components deve contenere almeno un elemento\n");
+        }
+        $this->components = $components;
+    }
+
     public function get_img()
     {
         return $this->img;
@@ -41,6 +50,7 @@ class Computer
 
     public function get_components_to_string()
     {
+
         $return_string = "";
         foreach ($this->components as $component) {
             $return_string = $return_string . $component->to_string() . "<br>";
