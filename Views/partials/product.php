@@ -1,8 +1,8 @@
-<div class="col-4 m-auto">
-    <div class="card shadow mt-4 m-auto ">
+<div class="col-4">
+    <div class="card shadow mb-5 ">
         <img src=<?= $computer->get_img() ?> class="card-img-top" alt="...">
 
-        <div class="card-body">
+        <div class="card-body" style="height: 400px">
             <h1 class="card-title">
                 <span><?= $computer->get_brand() ?></span>
                 <span> - </span>
