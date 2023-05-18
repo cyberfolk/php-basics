@@ -1,20 +1,26 @@
-
 <?php
-class Mouse extends Component
+class RAM extends Component
 {
     public function __construct(
         protected string $brand,
         protected string $model,
         protected float $price,
-        protected int $dpi
+        protected string $type,
+        protected int $capacity,
     ) {
         parent::__construct($brand, $model, $price);
-        $this->dpi = $dpi;
+        $this->type = $type;
+        $this->capacity = $capacity;
     }
 
-    public function get_dpi()
+    public function get_type()
     {
-        return $this->dpi;
+        return $this->type;
+    }
+
+    public function get_capacity()
+    {
+        return $this->capacity;
     }
 
     public function to_string()
@@ -23,6 +29,7 @@ class Mouse extends Component
             . $this->brand . ", "
             . $this->model . ", "
             . $this->price . "$, "
-            . $this->dpi . "DPI";
+            . $this->type . ","
+            . $this->capacity . "GB";
     }
 }

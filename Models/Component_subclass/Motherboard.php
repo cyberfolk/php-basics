@@ -1,27 +1,26 @@
-
 <?php
-class Monitor extends Component
+class Motherboard extends Component
 {
     public function __construct(
         protected string $brand,
         protected string $model,
         protected float $price,
-        protected float $size,
-        protected string $resolution
+        protected string $socket,
+        protected int $ram_slots,
     ) {
         parent::__construct($brand, $model, $price);
-        $this->size = $size;
-        $this->resolution = $resolution;
+        $this->socket = $socket;
+        $this->ram_slots = $ram_slots;
     }
 
-    public function get_size()
+    public function get_socket()
     {
-        return $this->size;
+        return $this->socket;
     }
 
-    public function get_resolution()
+    public function get_ram_slots()
     {
-        return $this->resolution;
+        return $this->ram_slots;
     }
 
     public function to_string()
@@ -30,7 +29,7 @@ class Monitor extends Component
             . $this->brand . ", "
             . $this->model . ", "
             . $this->price . "$, "
-            . $this->size . "\", "
-            . $this->resolution;
+            . $this->socket . "Socket, "
+            . $this->ram_slots . "RAM Slot";
     }
 }

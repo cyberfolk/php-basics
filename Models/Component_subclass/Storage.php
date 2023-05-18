@@ -1,28 +1,27 @@
-
 <?php
-class Keyboard extends Component
+class Storage extends Component
 {
     public function __construct(
         protected string $brand,
         protected string $model,
         protected float $price,
-        protected int $extension
+        protected int $capacity
     ) {
         parent::__construct($brand, $model, $price);
-        $this->extension = $extension;
+        $this->capacity = $capacity;
     }
 
-    public function get_extension()
+    public function get_capacity()
     {
-        return $this->extension;
+        return $this->capacity;
     }
 
     public function to_string()
     {
-        return "<strong>" . get_class() . "</strong>"
-            . ": " . $this->brand . ", "
+        return "<strong>" . get_class() . "</strong>"  . ": "
+            . $this->brand . ", "
             . $this->model . ", "
             . $this->price . "$, "
-            . $this->extension . "%";
+            . $this->capacity . "GB";
     }
 }

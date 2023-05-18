@@ -1,20 +1,26 @@
-
 <?php
-class Mouse extends Component
+class CPU extends Component
 {
     public function __construct(
         protected string $brand,
         protected string $model,
         protected float $price,
-        protected int $dpi
+        protected int $core_num,
+        protected float $frequency
     ) {
         parent::__construct($brand, $model, $price);
-        $this->dpi = $dpi;
+        $this->core_num = $core_num;
+        $this->frequency = $frequency;
     }
 
-    public function get_dpi()
+    public function get_core_num()
     {
-        return $this->dpi;
+        return $this->core_num;
+    }
+
+    public function get_frequency()
+    {
+        return $this->frequency;
     }
 
     public function to_string()
@@ -23,6 +29,7 @@ class Mouse extends Component
             . $this->brand . ", "
             . $this->model . ", "
             . $this->price . "$, "
-            . $this->dpi . "DPI";
+            . $this->core_num . " Core"
+            . $this->frequency . " GHz";
     }
 }
