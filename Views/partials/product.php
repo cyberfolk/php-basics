@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . "/../../Database/db.php";
+?>
+
 <div class="col-4">
     <div class="card shadow mb-5 ">
         <img src=<?= $computer->get_img() ?> class="card-img-top" alt="...">

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "../../../Traits/Capacitable.php";
 class CPU extends Component
 {
     public function __construct(
@@ -6,7 +7,7 @@ class CPU extends Component
         protected string $model,
         protected float $price,
         protected int $core_num,
-        protected float $frequency
+        protected float $frequency,
     ) {
         parent::__construct($brand, $model, $price);
         $this->core_num = $core_num;
@@ -27,7 +28,7 @@ class CPU extends Component
     {
         return "<strong>" . get_class() . "</strong>" . ": "
             . parent::to_string()
-            . $this->get_core_num() . " Core"
+            . $this->get_core_num() . " Core , "
             . $this->get_frequency() . " GHz";
     }
 }

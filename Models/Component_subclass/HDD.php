@@ -1,25 +1,23 @@
 <?php
-class Storage extends Component
+require_once __DIR__ . "../../../Traits/Capacitable.php";
+
+class HDD extends Component
 {
+    use Capacitable;
     public function __construct(
         protected string $brand,
         protected string $model,
         protected float $price,
-        protected int $capacity
+        int $capacity
     ) {
         parent::__construct($brand, $model, $price);
-        $this->capacity = $capacity;
-    }
-
-    public function get_capacity()
-    {
-        return $this->capacity;
+        $this->set_capacity($capacity);
     }
 
     public function to_string()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
             . parent::to_string()
-            . $this->capacity . "GB";
+            . $this->get_capacity() . "GB";
     }
 }
