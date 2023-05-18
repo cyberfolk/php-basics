@@ -27,9 +27,7 @@ class Monitor extends Component
     public function to_string()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . $this->brand . ", "
-            . $this->model . ", "
-            . $this->price . "$, "
+            . parent::to_string()
             . $this->size . "\", "
             . $this->resolution;
     }

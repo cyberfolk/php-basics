@@ -7,6 +7,10 @@ class Component
         $this->model = $model;
         $this->price = $price;
     }
+    public function get_brand()
+    {
+        return $this->brand;
+    }
 
     public function get_model()
     {
@@ -16,5 +20,12 @@ class Component
     public function get_price()
     {
         return $this->price;
+    }
+
+    public function to_string()
+    {
+        return $this->get_brand() . ", "
+            . $this->get_model() . ", "
+            . $this->get_price() . "$, ";
     }
 }

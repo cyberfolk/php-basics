@@ -25,10 +25,8 @@ class RAM extends Component
 
     public function to_string()
     {
-        return "<strong>" . get_class() . "</strong>"  . ": "
-            . $this->brand . ", "
-            . $this->model . ", "
-            . $this->price . "$, "
+        return "<strong>" . get_class() . "</strong>" . ": "
+            . parent::to_string()
             . $this->type . ","
             . $this->capacity . "GB";
     }

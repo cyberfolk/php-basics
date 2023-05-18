@@ -4,7 +4,7 @@ require_once __DIR__ . "/Database/db.php";
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include __DIR__ . "/Views/layout/head.php" ?>
+<?php include_once __DIR__ . "/Views/layout/head.php" ?>
 
 <body class="bg-primary">
 
@@ -13,7 +13,7 @@ require_once __DIR__ . "/Database/db.php";
         <div class="container">
             <div class="row">
                 <?php foreach ($computer_list as $computer) : ?>
-                    <?php include __DIR__ . "/Views/partials/product.php" ?>
+                    <?php include_once __DIR__ . "/Views/partials/product.php" ?>
                 <?php endforeach; ?>
             </div>
             <!-- /.row -->
