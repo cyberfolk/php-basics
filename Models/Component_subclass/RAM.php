@@ -19,10 +19,10 @@ class RAM extends Component
         return $this->type;
     }
 
-    public function to_string()
+    public function get_details()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . parent::to_string()
+            . parent::get_details()
             . $this->type . ", "
             . $this->get_capacity() . "GB";
     }

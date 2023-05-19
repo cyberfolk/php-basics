@@ -23,10 +23,10 @@ class Motherboard extends Component
         return $this->ram_slots;
     }
 
-    public function to_string()
+    public function get_details()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . parent::to_string()
+            . parent::get_details()
             . $this->socket . "Socket, "
             . $this->ram_slots . "RAM Slot";
     }

@@ -16,10 +16,10 @@ class PowerSource extends Component
         return $this->watts;
     }
 
-    public function to_string()
+    public function get_details()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . parent::to_string()
+            . parent::get_details()
             . $this->watts . "W";
     }
 }

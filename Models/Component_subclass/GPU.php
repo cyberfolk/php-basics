@@ -27,10 +27,10 @@ class GPU extends Component
         return $this->frequency;
     }
 
-    public function to_string()
+    public function get_details()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . parent::to_string()
+            . parent::get_details()
             . $this->get_reserved_memory() . " GB"
             . $this->get_frequency() . " GHz";
     }

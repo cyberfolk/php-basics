@@ -48,12 +48,12 @@ class Computer
         return $this->img;
     }
 
-    public function get_components_to_string()
+    public function get_components_details()
     {
 
         $return_string = "";
         foreach ($this->components as $component) {
-            $return_string = $return_string . $component->to_string() . "<br>";
+            $return_string = $return_string . $component->get_details() . "<br>";
         }
         return rtrim($return_string, "\r\n");
     }

@@ -14,10 +14,10 @@ class HDD extends Component
         $this->set_capacity($capacity);
     }
 
-    public function to_string()
+    public function get_details()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . parent::to_string()
+            . parent::get_details()
             . $this->get_capacity() . "GB";
     }
 }

@@ -17,10 +17,10 @@ class Keyboard extends Component
         return $this->extension;
     }
 
-    public function to_string()
+    public function get_details()
     {
         return "<strong>" . get_class() . "</strong>" . ": "
-            . parent::to_string()
+            . parent::get_details()
             . $this->extension . "%";
     }
 }

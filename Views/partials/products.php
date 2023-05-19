@@ -35,7 +35,7 @@ require_once __DIR__ . "/../../Database/db.php";
                 </div>
                 <!-- /.battery -->
                 <div class="components">
-                    <span><?= $computer->get_components_to_string() ?></span>
+                    <span><?= $computer->get_components_details() ?></span>
                 </div>
                 <!-- /.components -->
             </div>

@@ -22,7 +22,7 @@ class Component
         return $this->price;
     }
 
-    public function to_string()
+    public function get_details()
     {
         return $this->get_brand() . ", "
             . $this->get_model() . ", "
