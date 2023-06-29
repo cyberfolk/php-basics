@@ -1,5 +1,3 @@
-Snack 1:
-
 ## Snack 1
 
 Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario.
