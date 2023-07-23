@@ -1,14 +1,10 @@
-# Consegna
+# PHP OOP Computer
 
-Immaginiamo le classi per modellizzare un personal computer.
+Creare le classi per modellizzare un personal computer.
 
-- Un computer desktop é un computer.
-- Un computer portatile é un computer.
-- Creiamo la classe computer come parent class ed estendiamola per le classi desktop e laptop.
-- Creiamo un set di dati in forma di array di oggetti e stampiamoli a schermo in una card usando bootstrap.
-- Nella card, indichiamo anche che tipo di prodotto stiamo visualizzando (desktop, laptop) creando un apposito metodo poliforfo in ciascuna sottoclasse.
-
-## BONUS:
-
-pensate a cosa compone un pc: 'ha un' monitor? 'ha una' mbo? 'ha una' keyboard? usate la composizione per indicare costruire appropriatamente le istanze.
-aggiungere un metodo che stampi la stringa con tutte le info del dispositivo (oltre ai getter/setters necessari).
+## Milestone
+- [x] Creare la classe 'computer` come parent-class ed estendiamola per le classi `desktop` e `laptop`.
+- [x] Creare un set di dati in forma di array di oggetti e stampiamoli a schermo in una card usando bootstrap.
+- [x] Nella card, indicare se si tratti di un desktop o di un laptop, creare un apposito metodo poliforfo in ciascuna sottoclasse.
+- [x] Creare la parent-class component e delle sue sottoclassi, sfruttare la composizione per comporre pc a piacimento.
+- [x] Aggiungere un metodo che stampi la stringa con tutte le info del dispositivo (oltre ai getter/setters necessari).
