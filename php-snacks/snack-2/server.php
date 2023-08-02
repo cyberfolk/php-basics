@@ -4,19 +4,15 @@ $name = $_POST["name"];
 $mail = $_POST["mail"];
 $age = $_POST["age"];
 
-$flag = true;
+$flag = false;
 
-if (!(strlen($name) > 3)) {
-    $flag = false;
-}
-
-if (!(str_contains($mail, ".") && str_contains($mail, "@"))) {
-    $flag = false;
-}
-
-
-if (!(is_numeric($age))) {
-    $flag = false;
+if (
+    strlen($name) > 3 &&
+    str_contains($mail, ".") &&
+    str_contains($mail, "@") &&
+    is_numeric($age)
+) {
+    $flag = true;
 }
 
 ?>
