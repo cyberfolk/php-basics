@@ -1,7 +1,7 @@
 # PHP Basics
 **Initial commit**: 03/05/23  
 
-:elephant: This Repo contains fundamental PHP exercises such as:
+**Info**: :elephant: This Repo contains fundamental PHP exercises such as:
 
 ## Exercises list
 - **Badwords** &rarr; Remove bad-words in a paragraph with form
